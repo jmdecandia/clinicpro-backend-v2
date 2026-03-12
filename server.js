@@ -594,7 +594,7 @@ app.get('/api/appointments/availability', authenticate, (req, res) => {
   const interval = 30; // intervalos de 30 minutos
   
   // Generar todos los slots posibles
-  const allSlots: string[] = [];
+  const allSlots = [];
   for (let hour = startHour; hour < endHour; hour++) {
     for (let minute = 0; minute < 60; minute += interval) {
       const time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
