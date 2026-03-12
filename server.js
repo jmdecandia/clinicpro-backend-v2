@@ -586,7 +586,7 @@ app.get('/api/appointments/availability', authenticate, (req, res) => {
   }
 
   const clinicId = req.clinicId;
-  const durationMinutes = parseInt(duration as string);
+  const durationMinutes = parseInt(String(duration));
   
   // Horario de trabajo: 9:00 - 18:00
   const startHour = 9;
